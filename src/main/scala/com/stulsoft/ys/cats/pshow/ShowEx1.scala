@@ -27,7 +27,13 @@ object ShowEx1 extends StrictLogging:
     val s1 = 123.show
     logger.info("s1 = {}", s1)
 
+  private def test3():Unit =
+    logger.info("==>test3")
+    val s1 = 123L.show
+    logger.info("s1 = {}", s1)
+
   def main(args: Array[String]): Unit =
     logger.info("==>main")
     test1()
     test2()
+    test3()

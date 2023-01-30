@@ -12,6 +12,9 @@ import com.typesafe.scalalogging.StrictLogging
 object EqEx1 extends StrictLogging:
   private val eqInt = Eq[Int]
 
+  /**
+   * Using default instance
+   */
   private def test1(): Unit =
     logger.info("==>test1")
     var r = eqInt.eqv(123, 123)
@@ -24,6 +27,9 @@ object EqEx1 extends StrictLogging:
       r = eqInt.eqv(123, "321") // Error
   */
 
+  /**
+   * Using interface syntax
+   */
   private def test2(): Unit =
     logger.info("==>test12")
     var r = 123 === 123

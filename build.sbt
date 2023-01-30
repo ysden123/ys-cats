@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
     libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.4.5",
     libraryDependencies += "org.typelevel" %% "cats-core" % "2.9.0",
 
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14" % Test,
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % Test,
 
     scalacOptions ++= Seq(
       "-feature",
