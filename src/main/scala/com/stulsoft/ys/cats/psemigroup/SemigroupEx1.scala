@@ -13,9 +13,7 @@ import cats.Semigroup
 object SemigroupEx1 extends StrictLogging:
   case class Person(fn:String, sn:String)
 
-  given concatPerson:Semigroup[Person] = new Semigroup[Person]:
-    override def combine(x: Person, y: Person): Person =
-      Person(x.fn + " " + y.fn, x.sn + " " + y.sn)
+  given concatPerson:Semigroup[Person] = (x: Person, y: Person) => Person(x.fn + " " + y.fn, x.sn + " " + y.sn)
 
   private def test1():Unit=
     logger.info("==>test1")

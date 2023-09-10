@@ -9,7 +9,7 @@ import cats.syntax.show.*
 import com.typesafe.scalalogging.StrictLogging
 
 object ShowEx1 extends StrictLogging:
-  private val showInt = Show.apply[Int]
+  private val showInt = Show[Int]
 
   /**
    * Using default instances

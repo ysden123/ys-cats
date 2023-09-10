@@ -17,7 +17,7 @@ object TypeClassEx1 extends StrictLogging:
 
   case class Circle(radius: Double)
 
-  object AreaInstances:
+  private object AreaInstances:
     given rectangleArea: Area[Rectangle] = new Area[Rectangle] {
       override def area(a: Rectangle): Double = a.width * a.length
     }
